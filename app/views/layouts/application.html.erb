@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Io</title>
+  <title>chyld.io</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+<div id="main">
+	<div id="header"><%= image_tag('chyld.jpg') %></div>
+	<div id="nav"></div>
+	<div id="content"><%= yield %></div>
+	<div id="footer">(c) Chyld Medford, 2012</div>
+</div>
 
 </body>
 </html>

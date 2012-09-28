@@ -11,3 +11,69 @@
  *= require_self
  *= require_tree .
  */
+
+@import url(http://fonts.googleapis.com/css?family=Josefin+Sans);
+
+*
+{
+	margin: 0px;
+	padding: 0px;
+}
+
+body
+{
+	background-color: #000000;
+}
+
+#main
+{
+	margin: 0px auto;
+	width: 700px;
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+#header
+{
+	border-bottom: 1px dashed #a0a0a0;
+	margin-bottom: 25px;	
+}
+
+#footer
+{
+	margin-top: 25px;	
+	margin-bottom: 25px;	
+	font-size: 13px;
+	color: #a0a0a0;
+}
+
+.klass
+{
+	float: left;
+	width: 300px;
+	background-color: #a0a0a0;
+}
+
+.logo
+{
+	
+}
+
+.name
+{
+	
+}
+
+.description
+{
+	
+}
+
+.dates
+{
+	
+}
+
+.clear
+{
+	clear: both;
+}
