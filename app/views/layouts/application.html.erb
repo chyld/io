@@ -10,7 +10,17 @@
 
 <div id="main">
 	<div id="header"><%= image_tag('chyld.jpg') %></div>
-	<div id="nav"></div>
+	<div id="motto">:i_create_software_engineers => {manhattan, brooklyn, queens}</div>
+	<div id="nav">
+		<div class="link"><%= link_to 'iOS', '/' %></div>
+		<div class="link"><%= link_to 'Ruby', '/' %></div>
+		<div class="link"><%= link_to 'Rails', '/' %></div>
+		<div class="link"><%= link_to 'Node.js', '/' %></div>
+		<div class="link"><%= link_to 'HTML 5', '/' %></div>
+		<div class="link"><%= link_to 'CSS 3', '/' %></div>
+		<div class="link"><%= link_to 'JavaScript', '/' %></div>
+		<div class="clear"></div>
+	</div>
 	<div id="content"><%= yield %></div>
 	<div id="footer">(c) Chyld Medford, 2012</div>
 </div>
