@@ -55,6 +55,7 @@ body
 .link
 {
 	float: left;
+	width: 100px;
 	padding: 20px;
 	margin: 5px;
 	font-size: 17px;
@@ -62,6 +63,11 @@ body
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
+}
+
+.link:hover
+{
+	background-color: #909090;
 }
 
 .link a
