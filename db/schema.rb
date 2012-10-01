@@ -11,15 +11,24 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120928170451) do
+ActiveRecord::Schema.define(:version => 20121001162712) do
 
-  create_table "klasses", :force => true do |t|
+  create_table "links", :force => true do |t|
+    t.text     "title"
+    t.text     "url"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "links_tags", :id => false, :force => true do |t|
+    t.integer "link_id"
+    t.integer "tag_id"
+  end
+
+  create_table "tags", :force => true do |t|
     t.string   "name"
-    t.text     "description"
-    t.string   "photo"
-    t.text     "dates"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
 end

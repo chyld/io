@@ -1,7 +1,7 @@
 Io::Application.routes.draw do
-
-  resources :klasses
   
+  resources :links
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -51,7 +51,7 @@ Io::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'klasses#index'
+  root :to => 'home#index'
 
   # See how all your routes lay out with "rake routes"
 
