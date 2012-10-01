@@ -1,15 +1,19 @@
-<div class="new">
-	<%= link_to "New", new_link_path %>
+<div class="nav">
+	<%= link_to "io", root_path %>
+	::
+	<%= link_to "all", links_path %>
+	::
+	<%= link_to "new", new_link_path %>
 </div>
 
 <% @tags.each do |tag| %>
 	<div class="tag">
-		<div class="name"><%= tag.name %></div>
+		<div class="name"><%= link_to tag.name, edit_tag_path(tag) %></div>
 		<div class="links">
 			<% tag.links.each do |link| %>
 				<div class="link">
 					<%= link_to '.', edit_link_path(link) %>
-					<%= link_to link.title.truncate(50), link.url %>
+					<%= link_to link.title.truncate(50), link.url, :target => '_blank' %>
 				</div>
 			<% end %>
 		</div>

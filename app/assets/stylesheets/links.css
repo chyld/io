@@ -10,6 +10,17 @@ body
 	font-size: 12px;	
 }
 
+textarea
+{
+	width: 400px;
+	height: 100px;
+}
+
+.nav
+{
+	padding: 15px 0px 15px 5px;
+}
+
 .tag
 {
 	float:left;
@@ -21,12 +32,49 @@ body
 
 .name
 {
-	padding: 3px;
+	padding: 5px;
 	background-color: #cccccc;
 	font-style: italic;
+}
+
+.name a
+{
+	color: #252525;
+	font-style: italic;
+	text-decoration: none;
+}
+
+.name a:hover
+{
+	text-decoration: underline;
 }
 
 .link
 {
 	margin-bottom: 3px;
+}
+
+.link a
+{
+	color: #3366ff;
+	text-decoration: none;
+}
+
+.link a:hover
+{
+	text-decoration: underline;
+}
+
+.nuke
+{
+	border: 1px dashed red;
+	text-align: center;
+	width: 100px;
+	padding: 10px;
+	margin: 10px;
+}
+
+.nuke:hover
+{
+	background-color: #cccccc;
 }
