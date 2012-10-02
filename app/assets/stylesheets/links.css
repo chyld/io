@@ -21,6 +21,11 @@ textarea
 	padding: 15px 0px 15px 5px;
 }
 
+.nav a
+{
+	text-decoration: none;
+}
+
 .tag
 {
 	float:left;
@@ -28,8 +33,6 @@ textarea
 	border-top: 1px solid #777777;
 	margin: 5px;
 	margin-bottom: 10px;
-	height: 150px;
-	overflow: auto;
 }
 
 .name
@@ -51,6 +54,18 @@ textarea
 	text-decoration: underline;
 }
 
+.links
+{
+	height: 150px;
+	overflow: auto;
+}
+
+.link:nth-child(even)
+{
+	background-color: #efefef;
+	font-style: italic;
+}
+
 .link
 {
 	margin-bottom: 3px;
@@ -58,7 +73,7 @@ textarea
 
 .link a
 {
-	color: #3366ff;
+	color: #3366cc;
 	text-decoration: none;
 }
 
