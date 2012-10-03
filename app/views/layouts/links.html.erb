@@ -9,7 +9,21 @@
 </head>
 <body>
 
-<%= yield %>
+	<div class="nav">
+		<%= link_to "i/o", root_path %>
+		::
+		<%= link_to "Books", books_path %>
+		::
+		<%= link_to "Links", links_path %>
+		::
+		<%= link_to "*book", new_book_path %>
+		::
+		<%= link_to "*link", new_link_path %>
+		::
+		<%= show_book_link(@book) %>
+	</div>
+
+	<div class="content"><%= yield %></div>
 
 </body>
 </html>

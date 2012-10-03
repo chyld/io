@@ -1,6 +1,6 @@
 <%= form_for(@tag) do |f| %>
   <div class="nuke">
-    <%= link_to "nuke", tag_path, :method => :delete %>
+    <%= link_to "nuke", tag_path(@tag), :method => :delete %>
   </div>
 
   <div class="field">
@@ -8,6 +8,7 @@
     <%= f.text_field :name %>
   </div>
   <div class="actions">
+	<%= f.hidden_field :id, :value => @tag.id %>
     <%= f.submit %>
   </div>
 <% end %>

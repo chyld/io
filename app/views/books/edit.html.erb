@@ -1,0 +1,16 @@
+<%= form_for(@book) do |f| %>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+
+	<% Tag.all.each do |tag| %>
+		<%= tag.name %>
+		<%= check_box_tag 'book[tag_ids][]', tag.id, @book.tags.include?(tag) %>
+	<% end %>
+
+  <div class="actions">
+	<%= f.hidden_field :id, :value => @book.id %>
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -29,6 +29,14 @@ t3 = Tag.create(:name => "c3")
 t4 = Tag.create(:name => "d4")
 t5 = Tag.create(:name => "e5")
 
+b1 = Book.create(:name => "bk1")
+b2 = Book.create(:name => "bk2")
+b3 = Book.create(:name => "bk3")
+
 t1.links = [l0, l1, l2, l3, l4, l5, l6, l7, l8, l9, la, lb, lc, ld, le, lf]
 t2.links = [l0, l1, l2, l3, l4, l5, l6, l7, l8, l9, la, lb, lc, ld, le]
 t3.links = [l0, l1, l2, l3, l4, l5, l6, l7, l8, l9, la, lb, lc, ld]
+
+b1.tags = [t1,t2, t3]
+b2.tags = [t3, t4]
+b3.tags = [t5]

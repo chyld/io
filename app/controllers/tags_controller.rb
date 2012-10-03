@@ -6,9 +6,7 @@ class TagsController < ApplicationController
   end
   
   def update
-    tag = Tag.find(params[:id])
-    tag.name = params[:tag][:name]
-    tag.save
+    Tag.persist(params[:tag])
     redirect_to links_path
   end
   

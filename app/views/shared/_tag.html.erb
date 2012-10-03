@@ -1,0 +1,11 @@
+<div class="tag">
+	<div class="tagname"><%= link_to tag.name, edit_tag_path(tag) %></div>
+	<div class="links">
+		<% tag.links.each do |link| %>
+			<div class="link">
+				<%= link_to '.', edit_link_path(link) %>
+				<%= link_to link.title.truncate(45), link.url, :target => '_blank' %>
+			</div>
+		<% end %>
+	</div>
+</div>

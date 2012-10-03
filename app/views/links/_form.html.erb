@@ -24,6 +24,7 @@
     <%= f.text_area :tags, :value => @link.tags.map(&:name).join(' ') %>
   </div>
   <div class="actions">
+	<%= f.hidden_field :id, :value => @link.id %>
     <%= f.submit %>
   </div>
 <% end %>
