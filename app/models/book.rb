@@ -11,7 +11,7 @@ class Book < ActiveRecord::Base
     return nil if [id, name].any?{|v| v.class != String} || tag_ids.class != Array
     
     id = id.squish
-    name = name.present? ? name.squish : "default"
+    name = name.present? ? name.squish.downcase : "default"
 
     obj = Book.find_by_id(id) || Book.find_or_create_by_name(name)
 
