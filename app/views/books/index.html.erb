@@ -1,3 +1,5 @@
 <% @books.each do |book| %>
-	<%= link_to book.name, book_path(book) %>
+	<div class="book">
+		<%= link_to book.name, book_path(book) %>
+	</div>
 <% end %>

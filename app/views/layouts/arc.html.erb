@@ -3,8 +3,8 @@
 <head>
   <title>chyld.io</title>
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-  <%= stylesheet_link_tag    "links", :media => "all" %>
-  <%= javascript_include_tag "links" %>
+  <%= stylesheet_link_tag    "arc", :media => "all" %>
+  <%= javascript_include_tag "arc" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -12,13 +12,15 @@
 	<div class="nav">
 		<%= link_to "i/o", root_path %>
 		::
-		<%= link_to "Books", books_path %>
+		<%= link_to "tags", tags_path %>
 		::
-		<%= link_to "Links", links_path %>
-		::
-		<%= link_to "*book", new_book_path %>
+		<%= link_to "books", books_path %>
 		::
 		<%= link_to "*link", new_link_path %>
+		::
+		<%= link_to "*note", new_note_path %>
+		::
+		<%= link_to "*book", new_book_path %>
 		::
 		<%= show_book_link(@book) %>
 	</div>

@@ -1,0 +1,14 @@
+<%= form_for(@note) do |f| %>
+  <div class="field">
+    <%= f.label :info %><br />
+    <%= f.text_area :info, :autofocus => 'autofocus' %>
+  </div>
+  <div class="field">
+    <%= f.label :tags %><br />
+    <%= f.text_area :tags, :value => @note.tags.map(&:name).join(' ') %>
+  </div>
+  <div class="actions">
+	<%= f.hidden_field :id, :value => @note.id %>
+    <%= f.submit %>
+  </div>
+<% end %>

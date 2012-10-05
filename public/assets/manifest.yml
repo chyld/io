@@ -1004,6 +1004,6 @@ icons/zoom_in.png: icons/zoom_in-db30a1cb1605560eab270702bf2f65d4.png
 icons/zoom_out.png: icons/zoom_out-bdd601e11ca44ae9868ac50338011789.png
 tag.jpg: tag-7b8913b9f11dd4697fd47f515b112ce6.jpg
 application.js: application-ccab98dc1abdf097c0af693e20aed861.js
-links.js: links-ccab98dc1abdf097c0af693e20aed861.js
+arc.js: arc-ccab98dc1abdf097c0af693e20aed861.js
 application.css: application-878813c603ec16578a3ff2f1352145ec.css
-links.css: links-11a32e8a635e7580249ed62f339e8ad8.css
+arc.css: arc-b659641192fe484c4b79143e503e277d.css

@@ -1,18 +1,17 @@
-class Link < ActiveRecord::Base
-  attr_accessible :url, :title
+class Note < ActiveRecord::Base
+  attr_accessible :info
   has_and_belongs_to_many :tags
 
   def self.persist(data = {})
     return nil if !data.is_a?(Hash)
 
     id = Scrub.str(data[:id], '', squish:true)
-    url = Scrub.str(data[:url], 'url', squish:true)
-    title = Scrub.str(data[:title], 'title', strip:true)
+    info = Scrub.str(data[:info], 'info')
     tags = Scrub.str(data[:tags], 'tag', squish:true)
 
-    obj = Link.find_by_id(id) || Link.find_or_create_by_url(url)
+    obj = Note.find_by_id(id) || Note.create(info:info)
     obj.tags = tags.split.map{|n| Tag.persist(name:n)}.compact.uniq
-    obj.update_attributes(url:url, title:title)
+    obj.update_attributes(info:info)
     obj
   end
 end

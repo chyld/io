@@ -1,9 +1,10 @@
 Io::Application.routes.draw do
-  
+
+  resources :tags
   resources :links
-  resources :tags, :only => [:edit, :update, :destroy]
+  resources :notes
   resources :books
-  
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

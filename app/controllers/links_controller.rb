@@ -1,32 +1,20 @@
 class LinksController < ApplicationController
-  layout 'links'
-
-  def index
-    @tags = Tag.find(:all, :order => :name)
-  end
-
-  def show
-    @link = Link.find(params[:id])
-  end
-
+  layout 'arc'
   def new
     @link = Link.new
   end
-
+  
+  def create
+    Link.persist(params[:link])
+    redirect_to tags_path
+  end
+  
   def edit
     @link = Link.find(params[:id])
   end
-
-  def create
-    Link.persist(params[:link])
-    redirect_to links_path
-  end
-
+  
   def update
     Link.persist(params[:link])
-    redirect_to links_path
-  end
-
-  def destroy
+    redirect_to tags_path
   end
 end

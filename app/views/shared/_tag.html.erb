@@ -1,10 +1,16 @@
 <div class="tag">
 	<div class="tagname"><%= link_to tag.name, edit_tag_path(tag) %></div>
-	<div class="links">
+	<div class="data">
 		<% tag.links.each do |link| %>
 			<div class="link">
 				<%= link_to '.', edit_link_path(link) %>
-				<%= link_to link.title.truncate(45), link.url, :target => '_blank' %>
+				<%= link_to link.title.truncate(60), link.url, :target => '_blank' %>
+			</div>
+		<% end %>
+		<% tag.notes.each do |note| %>
+			<div class="note">
+				<%= link_to '.', edit_note_path(note) %>
+				<%= link_to note.info.truncate(60), note_path(note) %>
 			</div>
 		<% end %>
 	</div>
