@@ -9,23 +9,32 @@
 </head>
 <body>
 
-	<div class="nav">
-		<%= link_to "i/o", root_path %>
-		::
-		<%= link_to "tags", tags_path %>
-		::
-		<%= link_to "books", books_path %>
-		::
-		<%= link_to "*link", new_link_path %>
-		::
-		<%= link_to "*note", new_note_path %>
-		::
-		<%= link_to "*book", new_book_path %>
-		::
-		<%= show_book_link(@book) %>
+	<div class="container">
+		<div class="row">
+			<div class="span12">
+				<div class="navbar">
+				  <div class="navbar-inner">
+				    <a class="brand" href="/tags">io</a>
+				    <ul class="nav">
+				      <li><a href="<%= root_path %>">Home</a></li>
+				      <li><a href="<%= tags_path %>">Tags</a></li>
+				      <li><a href="<%= books_path %>">Books</a></li>
+				      <li><a href="<%= new_link_path %>">*link</a></li>
+				      <li><a href="<%= new_note_path %>">*note</a></li>
+				      <li><a href="<%= new_book_path %>">*book</a></li>
+							<li><%= show_book_link(@book) %></li>
+				    </ul>
+				  </div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="span12">
+				<%= yield %>
+				<div class="clearfix"></div>
+			</div>
+		</div>
 	</div>
-
-	<div class="content"><%= yield %></div>
 
 </body>
 </html>
