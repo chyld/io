@@ -1,5 +1,10 @@
 Io::Application.routes.draw do
 
+  match '/login' => 'session#new', :via => :get
+  match '/login' => 'session#create', :via => :post
+  match '/logout' => 'session#destroy', :via => :delete
+  
+  resources :users
   resources :tags
   resources :links
   resources :notes

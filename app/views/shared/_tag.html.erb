@@ -1,5 +1,5 @@
 <div class="tag">
-	<div class="tagname"><%= link_to tag.name, edit_tag_path(tag), :class => 'btn btn-mini btn-info' %></div>
+	<div class="tagname"><%= link_to tag.name, edit_tag_path(tag) %></div>
 	<div class="data">
 		<% tag.links.each do |link| %>
 			<div class="link">
